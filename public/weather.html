@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="./img/cloudlogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" media="screen and (max-width:1054px)" href="./responsive.css">
+
+    <title>current weather</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <h1> <span> ❄</span>current weather</h1>
+        </div>
+        <div class="nav-right">
+            <ul>
+                <li><a href="aboutus.html">about us</a> </li>
+                <li><a href="weather.html">weather</a> </li>
+                <li><a href="index.html">home</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section>
+        <div class="input-part">
+            <input type="text" id="city-name-enter" placeholder="enter city name">
+            <button type="submit" id="submit-btn">search</button>
+        </div>
+        <div id="default_mes" style="display: block">
+            <h1><i>Welcome in current weather app</i> </h1>
+            <p>enter your city name and get weather current update</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nesciunt ex voluptas!</p>
+
+        </div>
+        <div id="temp-info" style="display: none">
+            <div class="part-1">
+                <span id="current_day"> </span>
+                <p> <span id="current_date"></span> /<span id="current_month"></span> </p>
+            </div>
+            <div class="part-2">
+                <div id="top-layer">
+                    <p id="city-name-out">jhalawar india</p>
+                </div>
+                <div class="main-layer">
+                    <p><span id="temp">0</span><sup>0</sup> C </p>
+                    <p id="temp-status"> cloud </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-box">
+            <div id="foot">
+                <a href="#"><img src="./img/instagram.jpg" alt=""></a>
+                <a href="#"><img src="./img/fb.png" alt=""></a>
+                <a href="#"><img src="./img/twitter.png" alt=""></a>
+            </div>
+            <h1>copyrights © 2021 by govind singh </h1>
+        </div>
+    </footer>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

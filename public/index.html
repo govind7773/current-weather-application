@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>current weather</title>
+    <link rel="shortcut icon" href="./img/cloudlogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" media="screen and (max-width:1054px)" href="./responsive.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <h1> <span>❄</span>current weather</h1>
+        </div>
+        <div class="nav-right">
+            <ul>
+                <li><a href="aboutus.html">about us</a> </li>
+                <li><a href="weather.html">weather</a> </li>
+                <li><a href="index.html">home</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="center-main">
+        <div class="left-center-main">
+            <h1>current weather</h1>
+            <p>now here you can get weather of any city</p>
+            <p>so let's check weather of your location and go!</p>
+            <button id="btn01">check weather</button>
+        </div>
+        <div class="right-center-main" data-aos="fade-left">
+            <img src="./img/slide1.jpg" alt="">
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-box">
+            <div id="foot">
+                <a href="#"><img src="./img/instagram.jpg" alt=""></a>
+                <a href="#"><img src="./img/fb.png" alt=""></a>
+                <a href="#"><img src="./img/twitter.png" alt=""></a>
+            </div>
+            <h1>copyrights © 2021 by govind singh </h1>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 200,
+            duration: 3000
+        });
+        const btn = document.getElementById('btn01');
+        btn.onclick = function order() {
+            location.href = "weather.html";
+        }
+    </script>
+</body>
+
+</html>
