@@ -36,23 +36,43 @@ switch (day) {
         current_Day.innerText = "sunday";
         break;
 };
-const getinfo = (event) => {
+
+var enter_city_name = document.getElementById('city-name-enter');
+const temp = document.getElementById('temp');
+const temp_status = document.getElementById('temp-status');
+
+const getinfo = async (event) => {
     event.preventDefault();
-    var temp_info = document.getElementById('temp-info');
-    temp_info.style.display = "block";
 
-    var default_message = document.getElementById('default_mes');
-    default_message.style.display = "none";
 
-    var enter_city_name = document.getElementById('city-name-enter');
-    if (enter_city_name.value == "") {
-        document.getElementById('city-name-out').innerHTML = "plese enter city";
+    var city = enter_city_name.value;
+
+    if (city == "") {
+        document.getElementById('city-name-out').innerHTML = "plese enter city name before search";
     } else {
-        var city = enter_city_name.value;
+
         try {
-            const url = `api.openweathermap.org/data/2.5/weather?q="${city}"&units=metric&appid=a7a992dc9f4dcfc0ab4da1f989aafa4e`
-            const response = await fecth(url);
-            console.log(response);
+            const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=11a8ef0060520d0487e75007fffb5ffa`;
+            const response = await fetch(url);
+            const data = await response.json();
+            const arrdata = [data];
+            temp.innerText = arrdata[0].main.temp;
+            document.getElementById('city-name-out').innerHTML = `${arrdata[0].name},${arrdata[0].sys.country}`;
+            const temp_status_value = arrdata[0].weather[0].main
+            if (temp_status_value == "Clouds") {
+                temp_status.innerText = "☁";
+            } else if (temp_status_value == "Clear") {
+                temp_status.innerText = "⛅️";
+            } else if (temp_status_value == "Rain") {
+                temp_status.innerText = "☔";
+            } else if (temp_status_value == "Mist") {
+                temp_status.innerText = "🌫";
+            } else {
+                temp_status.innerText = temp_status_value;
+            }
+
+
+
         } catch {
             document.getElementById('city-name-out').innerHTML = "plese enter correct city name";
         }

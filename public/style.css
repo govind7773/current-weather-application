@@ -4,7 +4,7 @@
 }
 
 body{
-    background: rgba(0,0,0,0.4) url('/img/bg1.jpg');
+    background: rgba(0,0,0,0.4) url('./img/bg1.jpg');
     background-size:cover;
     background-blend-mode: darken;
     display: flex;
@@ -229,23 +229,14 @@ color:rgb(255, 139, 72);
 }
 .main-layer{
     margin-top: 30px;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 150px;
 }
-
-#default_mes{
-    text-align: center;
-    width: 500px;
-    /* border: 2px solid white; */
-    box-shadow: 2px 2px 5px white;
-    padding: 30px 20px;
-   font-size: 1.2rem;
-   color: white;
-   margin: auto;
-   margin-top: 50px;
+.main-layer #temp-status{
+              font-size: 4.5rem;
 }
 
 .error{

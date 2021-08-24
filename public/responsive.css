@@ -53,3 +53,15 @@
     height: 150px;
    
 }
+
+
+#temp-info {
+    width: 360px;
+    margin: 35px auto;
+}
+.input-part input[type="text"] {
+    width: 275px;
+}
+.input-part {
+    width: 370px;
+}

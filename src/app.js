@@ -1,3 +1,4 @@
+
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
@@ -7,7 +8,7 @@ const staticpath = path.join(__dirname, '../public');
 app.use(express.static(staticpath));
 
 app.use(express.json());
-
+console.log()
 app.get('/', (req, res) => {
     res.send("welcome to weather app");
 });
