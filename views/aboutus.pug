@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title current weather
+        link(rel="shortcut icon", href="../public/img/cloudlogo.png", type="image/x-icon")
+        link(rel="stylesheet", href="https://unpkg.com/aos@next/dist/aos.css")
+        link(rel="stylesheet", href="../public/css/style.css")
+        link(rel="stylesheet" ,media="screen and (max-width:1054px)" ,href="../public/css/responsive.css")
+    body 
+        include ./includes/header
+        section.about-container
+            #mycard
+                .card-left
+                    i 
+                        h1 #[b Govind Singh] 
+                        p 3nd year computer science student
+                        p M.B.M engineering college ,jodhpur
+                        p a full web developer
+                        #foot 
+                            a(href="https://www.instagram.com/mr_banna_sa393/") #[img(src="../public/img/instagram.jpg",alt="")]
+                            a(href="https://www.linkedin.com/in/govind-singh-99154a1b8") #[img(src="../public/img/fb.png", alt="")]
+                            a #[img(src="../public/img/twitter.png", alt="")]    
+                .card-right 
+                    img(src="../public/img/download.jpg", alt="")            
+        include ./includes/footer
