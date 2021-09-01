@@ -4,7 +4,7 @@
 }
 
 body{
-    background: rgba(0,0,0,0.4) url('./img/bg1.jpg');
+    background: rgba(0,0,0,0.4) url("../../public/img/bg1.jpg");
     background-size:cover;
     background-blend-mode: darken;
     display: flex;
@@ -239,12 +239,18 @@ color:rgb(255, 139, 72);
               font-size: 4.5rem;
 }
 
-.error{
+.error-container{
     width: 500px;
     height: 300px;
     margin-top: 50px;
+    margin: auto;
 }
-.error img{
+.error-container h1{
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+.error-box img{
     width: 500px;
     height: 300px;
 }

@@ -8,9 +8,8 @@ var current_date = new Date();
 var current_Date = document.getElementById('current_date');
 var current_Day = document.getElementById('current_day');
 var current_Month = document.getElementById('current_month');
-current_Date.innerText = current_date.getUTCDate();
+current_Date.innerText = current_date.toLocaleDateString();
 
-current_Month.innerText = current_date.getUTCMonth() + 1;
 var day = current_date.getUTCDay();
 
 switch (day) {
@@ -52,7 +51,7 @@ const getinfo = async (event) => {
     } else {
 
         try {
-            const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=11a8ef0060520d0487e75007fffb5ffa`;
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=11a8ef0060520d0487e75007fffb5ffa`;
             const response = await fetch(url);
             const data = await response.json();
             const arrdata = [data];
