@@ -206,12 +206,13 @@ color:rgb(255, 139, 72);
     color: white;
 }
 #temp-info{
-    width: 500px;
+    width: 700px;
     margin: auto;
     height: 300px;
     margin-top: 20px;
+    background-color: rgba(0,0,0,0.6);
     color: white;
-    backdrop-filter: blur(4px);
+    /* backdrop-filter: blur(4px); */
     box-shadow: 5px 5px 10px black, -5px 5px 10px black;
 }
 #temp-info .part-1{
