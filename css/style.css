@@ -4,7 +4,7 @@
 }
 
 body{
-    background: rgba(0,0,0,0.4) url("../../public/img/bg1.jpg");
+    background: rgba(0,0,0,0.4) url("../img/bg1.jpg");
     background-size:cover;
     background-blend-mode: darken;
     display: flex;
@@ -75,8 +75,8 @@ color:rgb(255, 139, 72);
     margin: 4px;
 }
 
-.footer-box h1{
-    font-size: 0.9rem;
+.footer-box p{
+    font-size: 1.2rem;
     text-align: center;
    color: rgb(183, 0, 255);
 }
@@ -206,12 +206,13 @@ color:rgb(255, 139, 72);
     color: white;
 }
 #temp-info{
-    width: 500px;
+    width: 700px;
     margin: auto;
     height: 300px;
     margin-top: 20px;
+    background-color: rgba(0,0,0,0.6);
     color: white;
-    backdrop-filter: blur(4px);
+    /* backdrop-filter: blur(4px); */
     box-shadow: 5px 5px 10px black, -5px 5px 10px black;
 }
 #temp-info .part-1{
@@ -239,18 +240,3 @@ color:rgb(255, 139, 72);
               font-size: 4.5rem;
 }
 
-.error-container{
-    width: 500px;
-    height: 300px;
-    margin-top: 50px;
-    margin: auto;
-}
-.error-container h1{
-    color: white;
-    text-align: center;
-    font-size: 2rem;
-}
-.error-box img{
-    width: 500px;
-    height: 300px;
-}
