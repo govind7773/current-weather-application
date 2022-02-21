@@ -4,5 +4,5 @@ AOS.init({
 });
 const btn = document.getElementById('btn01');
 btn.onclick = function order() {
-    location.href = "weather";
+    location.href = "weather.html";
 }

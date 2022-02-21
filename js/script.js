@@ -1,9 +1,7 @@
 
-
-
-
 const city_name = document.getElementById('city-name-enter');
 const submitbtn = document.getElementById('submit-btn');
+const formSubmit = document.getElementById('getWeather');
 var current_date = new Date();
 var current_Date = document.getElementById('current_date');
 var current_Day = document.getElementById('current_day');
@@ -42,10 +40,8 @@ const temp_status = document.getElementById('temp-status');
 
 const getinfo = async (event) => {
     event.preventDefault();
-
-
     var city = enter_city_name.value;
-
+    enter_city_name.value = "";
     if (city == "") {
         document.getElementById('city-name-out').innerHTML = "plese enter city name before search";
     } else {
@@ -70,13 +66,11 @@ const getinfo = async (event) => {
                 temp_status.innerText = temp_status_value;
             }
 
-
-
         } catch {
             document.getElementById('city-name-out').innerHTML = "plese enter correct city name";
         }
     }
 
 }
-submitbtn.addEventListener('click', getinfo);
+formSubmit.addEventListener('submit', getinfo);
 
